@@ -2,8 +2,8 @@
 
 namespace VojtechDobes\NetteForms;
 
-use Nette\Config\CompilerExtension;
-use Nette\Utils\PhpGenerator\ClassType;
+use Nette\DI\CompilerExtension;
+use Nette\PhpGenerator\ClassType;
 
 
 /**
