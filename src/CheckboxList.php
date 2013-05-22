@@ -4,6 +4,7 @@ namespace VojtechDobes\NetteForms;
 
 use Nette\Forms\Container;
 use Nette\Forms\Controls\BaseControl;
+use Nette\Forms\IControl;
 use Nette\InvalidArgumentException;
 use Nette\Utils\Html;
 
@@ -299,7 +300,7 @@ class CheckboxList extends BaseControl
 	 * @param  int
 	 * @return bool
 	 */
-	public static function validateRange(CheckboxList $control, array $range)
+	public static function validateRange(IControl $control, $range)
 	{
 		return static::validateMinLength($control, $range[0]) && static::validateMaxLength($control, $range[1]);
 	}
