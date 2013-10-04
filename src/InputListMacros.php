@@ -61,7 +61,7 @@ class InputListMacros extends Latte\Macros\MacroSet
 			$node->openingCode .= '$iterations = 0; foreach ($_inputlist->getItems() as ';
 			$node->closingCode = '<?php $iterations++; endforeach;';
 		}
-		$as = preg_replace('#\s?as\s+(.*)#i', '$1', $writer->formatArgs(), 1);
+		$as = preg_replace('#[a-z_A-Z0-9]+\s?as\s+(.*)#i', '$1', $writer->formatArgs(), 1);
 		$withKey = preg_match('#\s+=>\s+#i', $as);
 		if ($withKey !== 1) {
 			$as = '$_inputlistKey => ' . $as;
