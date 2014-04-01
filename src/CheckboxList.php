@@ -252,48 +252,6 @@ class CheckboxList extends BaseControl
 
 
 	/**
-	 * Validator for the minimum amount of checked boxes
-	 *
-	 * @param  CheckboxList
-	 * @param  int
-	 * @return bool
-	 */
-	public static function validateMinLength(CheckboxList $control, $length)
-	{
-		return count($control->getValue()) >= $length;
-	}
-
-
-
-	/**
-	 * Validator for the maximum amount of checked boxes
-	 *
-	 * @param  CheckboxList
-	 * @param  int
-	 * @return bool
-	 */
-	public static function validateMaxLength(CheckboxList $control, $length)
-	{
-		return count($control->getValue()) <= $length;
-	}
-
-
-
-	/**
-	 * Validator for the exact amount of checked boxes
-	 *
-	 * @param  CheckboxList
-	 * @param  int
-	 * @return bool
-	 */
-	public static function validateLength(CheckboxList $control, $length)
-	{
-		return count($control->getValue()) == $length;
-	}
-
-
-
-	/**
 	 * Validator for the range of checked boxes
 	 *
 	 * @param  CheckboxList
@@ -302,7 +260,7 @@ class CheckboxList extends BaseControl
 	 */
 	public static function validateRange(IControl $control, $range)
 	{
-		return static::validateMinLength($control, $range[0]) && static::validateMaxLength($control, $range[1]);
+		return static::validateLength($control, $range);
 	}
 
 
