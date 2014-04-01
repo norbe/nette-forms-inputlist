@@ -1,5 +1,5 @@
 {
-	"name": "vojtech-dobes/nette-forms-inputlist",
+	"name": "jkocour/nette-forms-inputlist",
 	"description": "Alternative RadioList & CheckboxList for Nette Framework",
 	"keywords": ["nette", "forms", "radiolist", "checkboxlist"],
 	"homepage": "http://github.com/vojtech-dobes/nette-forms-inputlist",
